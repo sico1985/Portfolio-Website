@@ -1,0 +1,74 @@
+  .main {
+    text-align: center;
+    max-width: 80%;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .email {
+    color: #2f67ec;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    header {
+      font-size: 3vw; /* Adjust font size for smaller screens */
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      height: 400px;
+    }
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    header {
+      font-size: 3vw; /* Further adjust font size for smaller screens */
+    }
+    nav .item:hover {
+      width: 100%;
+      background-color: #2f67ec; /* replace with your desired color */
+  
+   }
+    .underline {
+  
+      display: none;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+   }
+
+
+  @media only screen and (max-width: 480px) {
+    header {
+      font-size: 2.5vw; /* Further adjust font size for smallest screens */
+    }
+  
+    .underline {
+      display: none;
+  
+   }
+    nav {
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    nav .item {
+      min-width: 100%;
+    }
+  }  

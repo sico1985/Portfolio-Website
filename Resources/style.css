@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #2f67ec;
+}
+
+body {
+  font-family: "Euclid Circular A", "Poppins";
+  background: #12161f;
+  color: white;
+  margin: 0;
+  height: 94vh;
+  display: grid;
+  place-items: center;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  z-index: 100;
+  background: #1f2635;
+  font-weight: 400;
+  font-size: 0;
+  display: flex;
+  padding: 0;
+  width: 80%;
+}
+
+nav .item {
+  color: white;
+  font-size: 0.8rem;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  cursor: pointer;
+  z-index: 5;
+  min-width: 33.3%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.underline {
+  height: 6px;
+  background: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  width: 33.3%;
+  z-index: 2;
+  pointer-events: none;
+  transition: 0.35s;
+}
+
+nav .item:nth-child(1):hover ~ .underline {
+  transform: translate(0, 0);
+}
+
+nav .item:nth-child(2):hover ~ .underline {
+  transform: translate(100%, 0);
+}
+
+nav .item:nth-child(3):hover ~ .underline {
+  transform: translate(200%, 0);
+}
+
+header {
+  font-size: 2.5vw;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    font-size: 3vw; /* Adjust font size for smaller screens */
+    width: 100%;
+  }
+  img {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    font-size: 3vw; /* Further adjust font size for smaller screens */
+  }
+  nav .item:hover {
+    width: 100%;
+    background-color: #2f67ec; /* replace with your desired color */
+
+ }
+  .underline {
+
+    display: none;
+
+ }
+  nav {
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  img {
+    height: 400px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    font-size: 2.5vw; /* Further adjust font size for smallest screens */
+  }
+
+  .underline {
+    display: none;
+
+ }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .item {
+    min-width: 100%;
+  }
+
+  img {
+    height: 250px;;
+  }
+}
